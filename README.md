@@ -1,6 +1,6 @@
 # Project Title
 
-This project aims to provide user a mobile-friendly browser application to monitor stock portfolio market price and each transaction current profit and loss amount.
+This project aims to provide user a mobile-friendly browser application to popular shortcuts
 
 ## Getting Started
 
@@ -54,3 +54,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Solution design inspiration from [Redux](https://github.com/reactjs/redux) and Redux-saga(https://github.com/redux-saga/redux-saga)
 * UI inspiration from [Material-UI](https://material-ui-next.com/)
 * Requirements inspiration from [SpaceShip AU](https://www.spaceship.com.au)
+"# this is the repo for www.excelexcel.com#" 

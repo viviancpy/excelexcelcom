@@ -1,0 +1,37 @@
+.category-board-main {
+  width: 100%;
+}
+
+.category-board-table {
+  min-width: 600px;
+}
+
+.cell-icon-button{
+  width: 5%;
+}
+
+.cell-summary{
+  width: 20%;
+}
+
+.cell-details{
+  width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .category-board-main {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .category-board-table {
+    min-width: 320px;
+  }
+
+  /* all mui table related styling needs to be more specific class selector so as to take higher pref than mui class */
+  thead.category-board-table-header {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

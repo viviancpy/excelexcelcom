@@ -1,15 +1,15 @@
 import { createSelector } from 'reselect'
 
-const getTransactions = (state, props) =>
-  state.portfolio.transactions
+const getNoteItems = (state, props) =>
+  state.portfolio.NoteItems
 
 const getQuotes = (state, props) =>
   state.quote.quotes
 
 const portfolioWithQuoteSelector = createSelector(
-  [getTransactions, getQuotes],
-  (transactions, quotes) => {
-    return transactions.map(tx => {
+  [getNoteItems, getQuotes],
+  (NoteItems, quotes) => {
+    return NoteItems.map(tx => {
       const quote = quotes[tx.symbol];
       if (quote && quote.isSuceeded && !isNaN(quote.marketPrice)){
         tx['marketPrice'] = Number(quote.marketPrice);

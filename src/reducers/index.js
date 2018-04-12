@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import symbolReducer from './symbolReducer';
-import portfolioReducer from './portfolioReducer';
-import quoteReducer from './quoteReducer';
+import topicReducer from './topicReducer';
+import noteItemReducer from './noteItemReducer';
+import noteGroupReducer from './noteGroupReducer';
 
 const rootReducer = combineReducers({
-  symbol: symbolReducer,
-  portfolio: portfolioReducer,
-  quote: quoteReducer
+  topic: topicReducer,
+  noteGroup: noteGroupReducer,
+  noteItem: noteItemReducer
 })
 
 export default rootReducer

@@ -1,4 +1,4 @@
 import * as Types from '../constants/ActionTypes'
 
-export const addTransaction = transaction => ({type: Types.UI_ADD_TRANSACTION, transaction: transaction})
-export const removeTransaction = transactionId => ({type: Types.UI_REMOVE_TRANSACTION, transactionId: transactionId})
+export const addNoteItem = NoteItem => ({type: Types.UI_ADD_NOTE_ITEM, NoteItem: NoteItem})
+export const removeNoteItem = NoteItemId => ({type: Types.UI_REMOVE_NOTE_ITEM, NoteItemId: NoteItemId})

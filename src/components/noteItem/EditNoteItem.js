@@ -7,9 +7,9 @@ import Button from 'material-ui/Button';
 import History from 'material-ui-icons/History';
 import Done from 'material-ui-icons/Done';
 import HighlightOffIcon from 'material-ui-icons/HighlightOff';
-import './EditTransaction.css';
+import './EditNoteItem.css';
 
-class EditTransaction extends PureComponent {
+class EditNoteItem extends PureComponent {
   static propTypes = {
     symbol: PropTypes.string,
     purchaseVolumn: PropTypes.number,
@@ -25,11 +25,11 @@ class EditTransaction extends PureComponent {
   }
 
   state = {
-    symbolInput: EditTransaction.defaultProps.symbol,
+    symbolInput: EditNoteItem.defaultProps.symbol,
     symbolInputError: {isError: false, errorText: ''},
-    purchaseVolumnInput: EditTransaction.defaultProps.purchaseVolumn,
+    purchaseVolumnInput: EditNoteItem.defaultProps.purchaseVolumn,
     purchaseVolumnInputError: {isError: false, errorText: ''},
-    purchasePriceInput: EditTransaction.defaultProps.purchasePrice,
+    purchasePriceInput: EditNoteItem.defaultProps.purchasePrice,
     purchasePriceInputError: {isError: false, errorText: ''},
   }
 
@@ -131,9 +131,9 @@ class EditTransaction extends PureComponent {
 
   resetState = () => {
     this.setState({
-      symbolInput: EditTransaction.defaultProps.symbol,
-      purchaseVolumnInput: EditTransaction.defaultProps.purchaseVolumn,
-      purchasePriceInput: EditTransaction.defaultProps.purchasePrice
+      symbolInput: EditNoteItem.defaultProps.symbol,
+      purchaseVolumnInput: EditNoteItem.defaultProps.purchaseVolumn,
+      purchasePriceInput: EditNoteItem.defaultProps.purchasePrice
     });
   }
 
@@ -145,12 +145,12 @@ class EditTransaction extends PureComponent {
     return (
       [
         <TableCell key="cancel" className="edit-cell" >
-          <IconButton aria-label="Cancel Add Transaction" onClick={this.handleCancel}>
+          <IconButton aria-label="Cancel Add NoteItem" onClick={this.handleCancel}>
             <HighlightOffIcon/>
           </IconButton>
         </TableCell>,
         <TableCell key="symbol" className="edit-cell">
-          <TextField className="input-transaction"
+          <TextField className="input-NoteItem"
             required
             label="Symbol"
             error={symbolInputError.isError}
@@ -162,7 +162,7 @@ class EditTransaction extends PureComponent {
           />
         </TableCell>,
         <TableCell key="purchaseVolumn" className="edit-cell">
-          <TextField className="input-transaction"
+          <TextField className="input-NoteItem"
             required
             error={purchaseVolumnInputError.isError}
             label="Shares Held"
@@ -178,7 +178,7 @@ class EditTransaction extends PureComponent {
           />
         </TableCell>,
         <TableCell key="purchasePrice" className="edit-cell">
-          <TextField className="input-transaction"
+          <TextField className="input-NoteItem"
             required
             error={purchasePriceInputError.isError}
             label="Purchase Price"
@@ -194,13 +194,13 @@ class EditTransaction extends PureComponent {
           />
         </TableCell>,
       <TableCell key="reset" className="edit-cell">
-        <Button className="reset-transaction" variant="raised" color="primary" disableRipple={true} onClick={this.handleReset}>
+        <Button className="reset-NoteItem" variant="raised" color="primary" disableRipple={true} onClick={this.handleReset}>
           Reset
           <History className="button-image" />
         </Button>
       </TableCell>,
       <TableCell key="confirm" className="edit-cell">
-        <Button className="confirm-transaction" variant="raised" color="primary" disableRipple={true} disabled={isConfirmDisabled} onClick={this.handleConfirm}>
+        <Button className="confirm-NoteItem" variant="raised" color="primary" disableRipple={true} disabled={isConfirmDisabled} onClick={this.handleConfirm}>
           Confirm
           <Done className="button-image" />
         </Button>
@@ -210,4 +210,4 @@ class EditTransaction extends PureComponent {
   }
 }
 
-export default EditTransaction;
+export default EditNoteItem;

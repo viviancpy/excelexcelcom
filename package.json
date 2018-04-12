@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-monitor",
+  "name": "excel-excel-com",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "description": "A site to keep track of performance of a list of stock",
+  "description": "A site to provide popular shortcuts and lookup",
   "main": "index.js",
   "author": "Vivian Chan",
   "license": "MIT"

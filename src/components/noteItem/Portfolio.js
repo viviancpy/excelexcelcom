@@ -2,38 +2,35 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Table, { TableBody, TableCell, TableHead, TableFooter, TableRow } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
-import Transaction from './Transaction';
-import AddNewTransaction from './AddNewTransaction';
+import NoteItem from './NoteItem';
+import AddNewNoteItem from './AddNewNoteItem';
 import './Portfolio.css';
 
 class Portfolio extends Component {
   static propTypes = {
-    transactions: PropTypes.array.isRequired,
-    onRemoveTransaction: PropTypes.func.isRequired,
-    onAddTransaction: PropTypes.func.isRequired
+    noteItems: PropTypes.array.isRequired,
+    onRemoveNoteItem: PropTypes.func.isRequired,
+    onAddNoteItem: PropTypes.func.isRequired
   }
 
   static defaultProps = {
     isLoading: true,
-    transactions: []
+    noteItems: []
   }
 
-  handleAddNewTransaction = e => {
-    this.setState({isAddingNewTransaction: true})
+  handleAddNewNoteItem = e => {
+    this.setState({isAddingNewNoteItem: true})
   }
 
   render() {
-    const { transactions, onRemoveTransaction, onAddTransaction } = this.props;
-    const transactionComponents = transactions.map((tx, idx) =>
-      <Transaction
+    const { noteItems, onRemoveNoteItem, onAddNoteItem } = this.props;
+    const NoteItemComponents = noteItems.map((tx, idx) =>
+      <NoteItem
         key={idx}
-        transactionId={idx}
-        symbol={tx.symbol}
-        purchaseVolumn={tx.purchaseVolumn}
-        purchasePrice={tx.purchasePrice}
-        marketPrice={tx.marketPrice}
-        profitAndLoss={tx.profitAndLoss}
-        onRemoveTransaction={onRemoveTransaction}
+        noteItemId={idx}
+        summary={tx.summary}
+        description={tx.description}
+        onRemoveNoteItem={onRemoveNoteItem}
       />
     );
     return (
@@ -50,10 +47,10 @@ class Portfolio extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {transactionComponents}
+            {NoteItemComponents}
           </TableBody>
           <TableFooter>
-            <AddNewTransaction onAddTransaction={onAddTransaction} />
+            <AddNewNoteItem onAddNoteItem={onAddNoteItem} />
           </TableFooter>
         </Table>
       </Paper>

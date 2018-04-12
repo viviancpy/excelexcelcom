@@ -1,4 +1,4 @@
-.input-transaction{
+.input-note-item{
   width: 100%;
 }
 
@@ -6,16 +6,16 @@
   margin-left: 10px;
 }
 
-.reset-transaction{
+.reset-note-item{
   float: right
 }
 
-.confirm-transaction{
+.confirm-note-item{
   float: left
 }
 
 @media screen and (max-width: 600px) {
-  .input-transaction{
+  .input-note-item{
     width: 90%;
   }
 
@@ -29,11 +29,11 @@
     text-align: left;
   }
 
-  .reset-transaction{
+  .reset-note-item{
     float: none;
   }
 
-  .confirm-transaction{
+  .confirm-note-item{
     float: none;
   }
 }
