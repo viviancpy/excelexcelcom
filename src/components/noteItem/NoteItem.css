@@ -1,3 +1,7 @@
+tr.note-item-row {
+  height: 30px;
+}
+
 @media screen and (max-width: 600px) {
   tr.note-item-row {
     display: flex;
@@ -8,17 +12,13 @@
     flex-grow: 1;
     text-align: left;
   }
-  table td.action-button:before {
-    content: 'NoteItem Details';
-  }
   table td.summary:before {
     content: 'Summary: ';
+    font-weight: bold;
   }
   table td.description:before {
     content: 'Details: ';
+    font-weight: bold;
   }
-  table td:last-child{
-    border-bottom: 1px solid;
-    border-bottom-color: #666;
-  }
+
 }

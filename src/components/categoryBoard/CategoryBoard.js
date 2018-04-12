@@ -39,16 +39,14 @@ class CategoryBoard extends Component {
           <TableHead className="category-board-table-header">
             <TableRow>
               <TableCell className="cell-icon-button"></TableCell>
-              <TableCell className="cell-summary">TBC-Summary</TableCell>
-              <TableCell className="cell-details">TBC-Details</TableCell>
+              <TableCell className="cell-summary">Shortcut</TableCell>
+              <TableCell className="cell-details">Details</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {NoteItemComponents}
           </TableBody>
-          <TableFooter>
-            <AddNoteItem onAddNoteItem={onAddNoteItem} />
-          </TableFooter>
+          
         </Table>
       </Paper>
     );

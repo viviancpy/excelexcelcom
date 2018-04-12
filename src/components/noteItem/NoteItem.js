@@ -27,9 +27,6 @@ class NoteItem extends PureComponent {
     return (
       <TableRow className="note-item-row">
         <TableCell className="note-item-cell action-button">
-          <IconButton aria-label="Delete" disableRipple={true} onClick={this.handleRemove}>
-            <DeleteIcon/>
-          </IconButton>
         </TableCell>
         <TableCell  className="note-item-cell summary">{summary}</TableCell>
         <TableCell className="note-item-cell description">{description}</TableCell>
